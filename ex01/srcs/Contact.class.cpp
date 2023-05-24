@@ -6,12 +6,12 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:23:00 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/09 14:56:00 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/09 15:56:38 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../Contact.class.hpp"
+#include "../class/Contact.class.hpp"
 
 Contact::Contact ( void ) {
 	std::cout << "Constructor called" << std::endl;

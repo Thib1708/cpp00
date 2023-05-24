@@ -6,13 +6,13 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:25:42 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/09 14:50:29 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/09 15:56:26 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../Contact.class.hpp"
-#include "../PhoneBook.class.hpp"
+#include "../class/Contact.class.hpp"
+#include "../class/PhoneBook.class.hpp"
 
 int main(void) 
 {

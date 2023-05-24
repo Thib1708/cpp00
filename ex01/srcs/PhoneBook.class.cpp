@@ -6,12 +6,12 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:44:48 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/09 15:30:57 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/09 15:56:30 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../PhoneBook.class.hpp"
+#include "../class/PhoneBook.class.hpp"
 
 PhoneBook::PhoneBook( void )
 {
