@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:44:48 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/09 15:56:30 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/30 11:41:29 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../class/PhoneBook.class.hpp"
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook( void )
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "[ PHONEBOOK ] Constructor called" << std::endl;
 	this->_nb_contact = 0;
 	this->_current_contact = 0;
 	return ;
@@ -23,7 +23,7 @@ PhoneBook::PhoneBook( void )
 
 PhoneBook::~PhoneBook( void )
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "[ PHONEBOOK ] Destructor called" << std::endl;
 	return ;
 }
 

@@ -6,7 +6,7 @@
 #    By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/05/24 11:04:47 by thibaultgir      ###   ########.fr        #
+#    Updated: 2023/05/30 11:39:53 by thibaultgir      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,17 +15,17 @@
 NAME			=	phonebook
 
 LIST_SRCS		=	main.cpp			\
-					Contact.class.cpp	\
-					PhoneBook.class.cpp
+					Contact.cpp	\
+					PhoneBook.cpp
 
-# LIST_CLASS		=	Contact.class.hpp	\
-# 					PhoneBook.class.hpp
+LIST_INCS		=	Contact.hpp	\
+					PhoneBook.hpp
 # DIRECTORY
 DIR_OBJS		=	.objs/
 
 DIR_SRCS		=	srcs/
 
-DIR_CLASS		=	class/
+DIR_INCS		=	includes/
 
 # CONSTANT
 
@@ -43,9 +43,7 @@ OBJS 			=	$(patsubst %.cpp, $(DIR_OBJS)%.o, $(SRCS))
 
 SRCS			=	${addprefix ${DIR_SRCS}, ${LIST_SRCS}}
 
-# CLASS			=	${addprefix ${DIR_CLASS}, ${LIST_CLASS}}
-
-# INCLUDES		=	${addprefix ${DIR_INCS}, ${HEADERS}}
+INCLUDES		=	${addprefix ${DIR_INCS}, ${LIST_INCS}}
 
 # COLOR
 
@@ -60,9 +58,9 @@ DEFAULT 		=	\033[0m
 ${DIR_OBJS}%.o 	:	%.cpp Makefile
 				@mkdir -p $(shell dirname $@)
 				@${PRINT} "${YELLOW}${SUPPR}Creating ${NAME}'s objects : $@${DEFAULT}"
-				@${CC} ${FLAGS} ${STD} -I ${DIR_CLASS} -c $< -o $@ 
+				@${CC} ${FLAGS} ${STD} -I ${DIR_INCS} -c $< -o $@ 
 
-${NAME}			:	${OBJS}
+${NAME}			:	${OBJS} ${INCLUDES}
 				@${PRINT} "${GREEN}${SUPPR}Creating ${NAME}'s objects : DONE${DEFAULT}"
 				@${PRINT} "\n${YELLOW}Compiling ${NAME}...${DEFAULT}"
 				@${CC} ${OBJS} -o ${NAME}

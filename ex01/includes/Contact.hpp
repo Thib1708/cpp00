@@ -6,12 +6,12 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:14:05 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/09 14:44:41 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/30 11:40:02 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_HPP
-# define CONTACT_CLASS_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 #include <string>
 

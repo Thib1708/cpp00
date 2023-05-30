@@ -6,7 +6,7 @@
 #    By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/05/24 11:04:34 by thibaultgir      ###   ########.fr        #
+#    Updated: 2023/05/30 09:14:58 by thibaultgir      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@
 
 NAME			=	megaphone
 
-LIST_SRCS		=	megaphone.cpp
+LIST_SRCS		=	megaphone.cpp	\
+
 # DIRECTORY
 DIR_OBJS		=	.objs/
 
-DIR_SRCS		=	./
+DIR_SRCS		=	srcs/
 
 # CONSTANT
 
@@ -48,7 +49,7 @@ DEFAULT 		=	\033[0m
 
 # RULES
 
-${DIR_OBJS}%.o 	:	%.c Makefile
+${DIR_OBJS}%.o 	:	%.cpp Makefile
 				@mkdir -p $(shell dirname $@)
 				@${PRINT} "${YELLOW}${SUPPR}Creating ${NAME}'s objects : $@${DEFAULT}"
 				@${CC} ${FLAGS} ${STD} -c $< -o $@ 

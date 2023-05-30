@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.cpp                                  :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:23:00 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/09 15:56:38 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/30 11:41:06 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../class/Contact.class.hpp"
+#include "Contact.hpp"
 
 Contact::Contact ( void ) {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "[ CONTACT ] Constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact ( void ) {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "[ CONTACT ] Destructor called" << std::endl;
 	return ;
 }
 
@@ -43,7 +43,7 @@ void	Contact::print_ten ( std::string str ) {
 	}
 	else
 	{
-		for (int i = 0; i < 10 - str.length(); i++)
+		for (size_t i = 0; i < 10 - str.length(); i++)
 			std::cout << " ";
 		std::cout << str;	
 	}
