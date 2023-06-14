@@ -6,7 +6,7 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:25:42 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/30 11:39:44 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/06/14 17:22:09 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ int main(void)
 			break ;
 		else if (line.compare("ADD") == 0)
 			repertoire.add();
+		else if (line.empty())
+		{
+			std::cout << std::endl;
+			return (1);
+		}
 	}
 
 	return (0);

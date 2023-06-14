@@ -6,7 +6,7 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:38:35 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/30 11:40:24 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/31 11:09:47 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,20 @@
 
 #include "Contact.hpp"
 
-class PhoneBook {
-	
+class PhoneBook
+{
 	private :
-
-		Contact	_contacts[8];
-		
-		int		_nb_contact;
-		int		_current_contact;
-
+			Contact	_contacts[8];
+			int		_nb_contact;
+			int		_current_contact;
 	public :
-	
-		PhoneBook( void );
-		~PhoneBook( void );
-		void	add( void );
-		void	search( void );
-		void	print( void );
+			/* Constructors & Destructors */
+			PhoneBook( void );
+			~PhoneBook( void );
+			/* Methods */
+			void	add( void );
+			void	search( void );
+			void	print( void );
 };
 
 #endif
