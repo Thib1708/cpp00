@@ -6,7 +6,7 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:25:42 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/06/14 17:22:09 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/08/14 11:10:01 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,17 @@ int main(void)
 {
 	PhoneBook 	repertoire;
 	std::string	line;
-	while (1)
+	while (line.compare("EXIT") != 0)
 	{
 		std::cout << "> ";
 		std::cin >> line;
 		if (line.compare("SEARCH") == 0)
 			repertoire.print();
-		else if (line.compare("EXIT") == 0)
-			break ;
 		else if (line.compare("ADD") == 0)
 			repertoire.add();
-		else if (line.empty())
+		if (std::cin.eof())
 		{
-			std::cout << std::endl;
-			return (1);
+			return (std::cout << std::endl << std::endl << "Exiting phoneBook.." << std::endl, 1);
 		}
 	}
 

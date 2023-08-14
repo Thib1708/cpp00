@@ -6,7 +6,7 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:23:00 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/30 11:41:06 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/08/14 11:10:23 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,15 @@ void	Contact::print_ten ( std::string str ) {
 }
 
 std::string	Contact::get_info( std::string str ) {
-	std::string info = "";
-	bool		isvalid = false;
+    std::string input = "";
 
-	while (!isvalid)
-	{
-		std::cout << str << std::flush;
-		std::cin.clear();
-		std::getline(std::cin, info);
-		if (std::cin.good() && info.empty())
-			std::cout << "This information can't be empty" << std::endl;
-		else 
-			isvalid = true;
-	}
-	return (info);
+    do {
+			std::cout << str;
+     		getline(std::cin, input);
+			if (std::cin.eof())
+				return (input);
+		} while (input.length() == 0 && !std::cin.eof());
+        return (input);
 }
 
 void	Contact::print_all ( void ) {
@@ -78,8 +73,18 @@ void	Contact::new_contact ( int index ) {
 	std::cin.ignore();
 	this->_index = index + 1;
 	this->_first_name = get_info("First name : ");
+	if (std::cin.eof())
+		return ;
 	this->_last_name = get_info("Last name : ");
+	if (std::cin.eof())
+			return ;
 	this->_nickname = get_info("Nickname : ");
+	if (std::cin.eof())
+			return ;
 	this->_phone_number = get_info("Phone number : ");
+	if (std::cin.eof())
+			return ;
 	this->_darkest_secret = get_info("Darkest secret : ");
+	if (std::cin.eof())
+			return ;
 }

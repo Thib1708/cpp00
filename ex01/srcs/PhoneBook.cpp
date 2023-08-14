@@ -6,7 +6,7 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:44:48 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/06/06 12:48:38 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/08/14 11:12:26 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void	PhoneBook::print( void )
 	{
 		std::cout << "Which contact you want to see ? ";
 		std::cin >> index;
+		if (std::cin.eof())
+			return ;
 		index--;
 		if (index < 0 || index > this->_nb_contact)
 		{
