@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
+/*   By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:44:48 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/08/14 11:12:26 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/08/31 08:49:32 by tgiraudo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,27 +43,31 @@ void	PhoneBook::print( void )
 	int	index = -1;
 	
 	i = -1;
-	std::cout << "------------------ Contact ------------------" << std::endl;
+	std::cout << std::endl << "------------------ Contact ------------------" << std::endl;
 	while (++i < this->_nb_contact)
+	{
 		_contacts[i].print_line();
+		if (i + 1 == this->_nb_contact)
+			std::cout << "---------------------------------------------" << std::endl;
+		else
+			std::cout << "|----------+----------+----------+----------|" << std::endl;
+	}
 	if (this->_nb_contact == 0)
 	{
 		std::cout << "No contact" << std::endl;
 		return ;
 	}
-	while (index < 0 || index > this->_nb_contact)
+	std::cout << std::endl << "Which contact you want to see ? ";
+	std::cin >> index;
+	if (std::cin.eof())
+		return ;
+	index--;
+	if (index < 0 || index > this->_nb_contact)
 	{
-		std::cout << "Which contact you want to see ? ";
-		std::cin >> index;
-		if (std::cin.eof())
-			return ;
-		index--;
-		if (index < 0 || index > this->_nb_contact)
-		{
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-			std::cout << "Invalid input" << std::endl;
-		}
+		std::cin.clear();
+		std::cin.ignore(2147483647, '\n');
+		std::cout << "Invalid input" << std::endl;
 	}
-	this->_contacts[index].print_all();
+	else
+		this->_contacts[index].print_all();
 }

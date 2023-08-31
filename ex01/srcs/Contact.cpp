@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
+/*   By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:23:00 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/08/14 11:10:23 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/08/31 08:48:35 by tgiraudo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	Contact::print_all ( void ) {
 }
 
 void	Contact::new_contact ( int index ) {
-	std::cin.ignore();
+	std::cin.ignore(2147483647, '\n');
 	this->_index = index + 1;
 	this->_first_name = get_info("First name : ");
 	if (std::cin.eof())

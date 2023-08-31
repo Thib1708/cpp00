@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+         #
+#    By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/05/30 11:39:53 by thibaultgir      ###   ########.fr        #
+#    Updated: 2023/08/22 16:35:07 by tgiraudo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 NAME			=	phonebook
 
 LIST_SRCS		=	main.cpp			\
-					Contact.cpp	\
+					Contact.cpp			\
 					PhoneBook.cpp
 
 LIST_INCS		=	Contact.hpp	\
